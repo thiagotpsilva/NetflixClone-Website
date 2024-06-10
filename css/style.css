@@ -67,6 +67,7 @@ form {
   height: 3rem;
   justify-content: flex-start;
   width: 13rem;
+
   background-color: #e3141d;
   justify-content: center;
   position: relative;
@@ -150,6 +151,7 @@ form {
 .showcase-content {
   position: relative;
   z-index: 2;
+
   width: 75%;
   margin: auto;
   display: flex;
@@ -543,7 +545,8 @@ form {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  /* min-height: 70vh; */
+  height: 70vh;
   width: 75%;
   margin: 0 auto;
 }
@@ -607,4 +610,86 @@ form {
 .grid-03 .grid-subtitle {
   width: 90%;
   font-size: 1.36rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    /* max-width: 768px !important; */
+    /* overflow: hidden !important; */
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    height: 70vh;
+
+    /* min-height: 10%; */
+  }
+
+  .grid-subtitle,
+  .grid-title {
+    justify-content: center;
+    text-align: center;
+    /* background-color: red; */
+    width: 90%;
+    margin: 0 auto;
+  }
+  .grid-title {
+    margin-bottom: 1rem;
+  }
+  .grid-content {
+    /* background-color: red; */
+  }
+  #grid-02.grid-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 5rem;
+    min-height: 70vh;
+
+    /* min-height: 80vh; */
+  }
+  #grid-02 .grid-content {
+    /* background-color: red; */
+    justify-content: flex-start;
+    height: fit-content;
+  }
+  #grid-02 .grid-video {
+    /* background-color: red; */
+    width: 100%;
+  }
+  #grid-02 .video {
+    left: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .showcase-content {
+    justify-content: flex-start;
+    margin-top: 3rem;
+  }
+  .showcase-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .showcase-content .lead {
+    font-size: 1rem;
+  }
+  form {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-submit {
+    margin-top: 1.5rem;
+  }
+
+  .showcase {
+    height: 50vh;
+  }
+
+  .grid-title {
+    font-size: 2rem;
+  }
 }
